@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="edu.phystech.wishnu" android:versionName="1.2.0" android:versionCode="3">
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <supports-screens android:anyDensity="true" />
+	<uses-sdk android:minSdkVersion="4"></uses-sdk>
+	<application android:label="@string/app_name"
+		android:allowTaskReparenting="true" android:name="WishNu_Starter" android:icon="@drawable/ic_menu_icon">
+		<activity android:label="@string/app_name" android:name="AcWishNuStarter" android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="AcSystemStatus" android:label="@string/sysstatus" ></activity>
+		
+		<activity android:name="android.androidVNC.VncCanvasActivity" android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+			</intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="vnc" />
+            </intent-filter>
+		</activity>
+       <activity android:name="android.androidVNC.ConnectionListActivity" android:label="@string/shortcut_label">
+        	<intent-filter>
+        		<action android:name="android.intent.action.CREATE_SHORTCUT" />
+        		<category android:name="android.intent.category.DEFAULT" />
+        	</intent-filter>
+        </activity>
+
+	</application>
+</manifest>

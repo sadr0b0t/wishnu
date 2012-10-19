@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/test_wall2"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center_horizontal"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2.5"
+        android:text="@string/wishnu"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:id="@+id/IndicatorScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dip" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:text="Screen optimized for" />
+
+                <RadioGroup
+                    android:id="@+id/screen_for_grp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/screen_for_device"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Device" />
+
+                    <RadioButton
+                        android:id="@+id/screen_for_desktop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Desktop" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/showscreen"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:text="@string/show_screen" />
+
+                <Button
+                    android:id="@+id/sysstatusbutton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/sysstatus" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/startbutton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginTop="20dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dip"
+                        android:text="@string/start"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:visibility="visible" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/stopbutton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="0dip"
+                        android:layout_marginTop="20dip"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dip"
+                        android:paddingRight="20dip"
+                        android:text="@string/stop"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:visibility="visible" >
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/IVPreparingBaseSystem"
+                        android:layout_width="10pt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_stat_box_red" />
+
+                    <TextView
+                        android:id="@+id/PreparingBaseSystemText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:text="Preparing base system"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/IVMountingSystemImage"
+                        android:layout_width="10pt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_stat_box_red" />
+
+                    <TextView
+                        android:id="@+id/MountingSystemImageText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:text="Preparing desktop system image"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/IVPreparingSystem"
+                        android:layout_width="10pt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_stat_box_red" />
+
+                    <TextView
+                        android:id="@+id/PreparingSystemText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:text="Preparing desktop for startup"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/IVStartingSystem"
+                        android:layout_width="10pt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_stat_box_red" />
+
+                    <TextView
+                        android:id="@+id/StartingSystemText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="3"
+                        android:text="Starting desktop"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/log_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_weight="0"
+        android:background="#000000"
+        android:maxLines="13"
+        android:minLines="13"
+        android:scrollbars="vertical"
+        android:textSize="10sp"
+        android:typeface="monospace"
+        android:visibility="gone" />
+
+</LinearLayout>
